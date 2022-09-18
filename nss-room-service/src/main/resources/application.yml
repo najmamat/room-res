@@ -1,0 +1,23 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8082
+  servlet:
+    context-path: /room
+
+spring:
+  application:
+    name: nss-room-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/${DB_NAME:nss}
+    username: ${DB_USER:nss}
+    password: ${DB_PASSWORD:nss}
+  jpa:
+    database-platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
+    generate-ddl: true
+    show-sql: false
+

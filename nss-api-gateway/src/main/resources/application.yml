@@ -1,0 +1,36 @@
+server:
+  port: 9999
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: nss-api-gateway
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          "[/**]":
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods: GET,POST,PUT,DELETE,OPTIONS
+      routes:
+        - id: testing-service
+          uri: http://localhost:8888
+          predicates:
+            - Path=/testing/**
+        - id: room-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/room/**
+        - id: user-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/user/**
+        - id: reservation-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/reservation/**

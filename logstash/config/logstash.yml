@@ -1,0 +1,2 @@
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.url: http://X.X.X.X:9200
