@@ -1,6 +1,6 @@
-# NSS - Backend
+# NSS - RoomRes
 
-Semestral project created by Matouš Najman, Vojtěch Luňák, Pavel Sušický, Lenka Hornová.
+Semestral project created by Matouš Najman, Vojtěch Luňák, Pavel Sušický.
 
 # 1. Installation
 
